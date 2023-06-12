@@ -1,0 +1,28 @@
+---
+title: "CarPrices"
+output: html_document
+date: "2023-06-08"
+---
+
+# Digital Analysis for Business - Car Prices
+
+## 1. Data Pre-Processing
+
+```{r}
+data <- read.csv("CarPrices.csv")
+data
+
+rows<- nrow(data)
+columns <- ncol(data)
+
+#summary(data)
+
+isna <- sum(is.na(data))
+str(data)
+
+
+cat("in this dataset we have", rows, "and", columns,"columns.")
+cat('there are', isna, 'null values')
+cat("there are both categorical variables as well as the numerical ones")
+
+```
